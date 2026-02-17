@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com');
+
 *{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
 }
 
 .container{
@@ -9,13 +15,11 @@
     grid-template-columns: 250px 1fr;
     grid-template-rows: repeat(5, 1fr);
     min-height: 100vh;
-    border-width: 1px;
-    border-color: black;
 }
 
 .sidebar {
   grid-row: 1 / 6;
-  background-color: red;
+  background-color: rgb(49, 145, 236);
   display: flex;
   flex-direction: column;
 }
@@ -23,22 +27,32 @@
 .header {
   grid-column: 2;
   grid-row: 1/2;
-  background-color: aqua;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
 }
 
 .main-content {
   grid-column: 2;
   grid-row: 2/6;
-  background-color: blue;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row: 1fr 1fr;
+  padding: 1.5rem;
+  gap: 1rem;
 }
 
 img{
   max-width: 3rem;
+  margin-right: 1rem;
 }
 
 .navigation img, .support img{
     max-width: 1.5rem;
     margin-right: 1rem;
+    color: white;
 }
 
 .logo, .navigation, .support{
@@ -55,4 +69,23 @@ img{
 
 .white-icon{
     fill: white;
+}
+
+.serach{
+  display: flex;
+  background-color: red;
+  align-items: center;
+}
+
+.profile-picture{
+  display: flex;
+  background-color: aqua;
+}
+
+.greeting{
+  background-color: bisque;
+}
+
+.buttons{
+  background-color: purple;
 }
