@@ -30,8 +30,7 @@ body{
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 1fr 2fr;
-  gap: 1rem;
-  margin: 1rem;
+  margin: 1.5em;
   align-items: center;
 }
 
@@ -50,10 +49,15 @@ img{
   margin-right: 1rem;
 }
 
-.navigation img, .support img, .search img{
+.navigation img, .support img, .header img{
     max-width: 1.5rem;
     margin-right: 1rem;
-    color: white;
+}
+
+.picture{
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
 }
 
 .logo, .navigation, .support{
@@ -68,10 +72,6 @@ img{
     margin: .75rem;
 }
 
-.white-icon{
-    fill: white;
-}
-
 .search{
   display: flex;
   align-items: center;
@@ -79,15 +79,20 @@ img{
 
 .profile-picture{
   display: flex;
-  background-color: aqua;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
 }
 
 .greeting{
-  background-color: bisque;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.buttons{
-  background-color: purple;
+.greeting img{
+  height: 3rem;
+  width: 3rem;
 }
 
 .search-bar{
@@ -96,4 +101,26 @@ img{
   border-radius: 999px;
   width: 80%;
   height: 1.5rem;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buttons ul{
+  padding: .5em 2em;
+  background-color: rgb(49, 145, 236);
+  border-radius: 999px;
+  color: white;
+}
+
+img[src$=".svg"] {
+  filter: invert(1) brightness(2);
+}
+
+img[src*="magnify"],  img[src*="bell-ring"]{
+  filter: none;
 }
